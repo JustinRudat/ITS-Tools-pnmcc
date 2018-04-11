@@ -15,19 +15,19 @@
 #	echo "Specify the OS with win, mac or lin"; exit 1;;	
 #esac
 
-tmp="http://www.tapaal.net/fileadmin/download/tapaal-3.4/tapaal-3.4.0-linux64.zip";
-term="zip";
-
-subtmp=${tmp:52}
-
-wget $tmp
-
-#les binaires sont deja compiler
-unzip $subtmp
-
-rm $subtmp
-
-namedir=${subtmp%$term}
+if [ !-f tapaal-3.4 ] ; then
+	tmp="http://www.tapaal.net/fileadmin/download/tapaal-3.4/tapaal-3.4.0-linux64.zip";
+	term="zip";
+	
+	subtmp=${tmp:52}
+	
+	wget $tmp
+	
+	#les binaires sont deja compiler
+	unzip $subtmp
+	
+	rm $subtmp
+fi
 
 # if [ ! -f eclipse/eclipse ] ; then 
 mkdir eclipse
