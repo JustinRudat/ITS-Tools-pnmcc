@@ -16,7 +16,7 @@ cd "$MODELNAME$$"
 
 export MODEL=$(pwd)
 
-time -p $BINDIR/limit_time.pl 900 $BINDIR/eclipse/its-tools -tapaalpath $BINDIR/tapaal-3.4.0-linux64/bin/verifypn64  -i $MODEL/model.pnml -examination ${@:2}
+time -p $BINDIR/limit_time.pl 900 $BINDIR/eclipse/its-tools -tapaalpath $BINDIR/tapaal-3.4.0-linux64/bin/verifypn64  -i $MODEL/model.pnml -examination ${@:2} -consoleLog 
 #killall -r 'its.*'
 #killall 'z3'
 #killall -r 'pins2.*'
