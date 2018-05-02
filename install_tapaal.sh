@@ -11,7 +11,7 @@ if [ ! -f tapaal-3.4.0-linux64/bin/verrifypn64 ] ; then
 	
 	wget $tmp
 	
-	#les binaires sont deja compiler
+	# already a binary build
 	unzip $subtmp
 	
 	rm $subtmp
