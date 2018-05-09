@@ -22,6 +22,8 @@ if ($ARGV[1] eq "-marcie") {
     $call =~ s/runatest/runmarcietest/g;
 } elsif ($ARGV[1] eq "-tapaal") {
     $call =~ s/runatest/runtapaaltest/g;
+
+    $call= $call." ".join (" ",@ARGV[1..$#ARGV]);
 } elsif ($ARGV[1] eq "-gspn") {
     $call =~ s/runatest/rungspntest/g;
 } else {
