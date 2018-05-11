@@ -21,7 +21,7 @@ script :
  - ./tag.sh $FLAGS
  - ./install_tapaal.sh
  - mkdir -p logs/oracle/
- - (rc=0 ; for MODEL in oracle/*RD.out ; do ./run_test.pl $MODEL -tapaal || rc=$? ; done; exit $rc) 
+ - (rc=0 ; for MODEL in oracle/*RD.out ; do ./run_test.pl $MODEL -tapaal -red || rc=$? ; ./run_test.pl $MODEL -tapaal || rc=$? ; ./run_test.pl $MODEL -tapaal -raw || rc=$? ; done; exit $rc) 
  - tar czf logs.tgz logs/
  - mv logs.tgz website/
 
