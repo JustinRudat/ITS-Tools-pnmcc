@@ -22,7 +22,7 @@ time -p $BINDIR/limit_time.pl 900 $BINDIR/eclipse/its-tools -tapaalpath $BINDIR/
 #killall -r 'pins2.*'
 
 cd ..
-
+#
 \rm -rf "$MODELNAME$$"
 
 cd ..
